@@ -1,8 +1,8 @@
-package net.ace.whatmeme;
+package net.ace;
 
-import net.fabricmc.api.ModInitializer;
-import net.ace.whatmeme.sounds.ModSounds;
 import net.ace.whatmeme.Commands.WhatCommands;
+import net.ace.whatmeme.sounds.ModSounds;
+import net.fabricmc.api.ModInitializer;
 
 public class WhatMeme implements ModInitializer {
     public static final String MOD_ID = "what-meme";

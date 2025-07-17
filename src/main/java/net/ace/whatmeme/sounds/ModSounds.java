@@ -1,6 +1,6 @@
 package net.ace.whatmeme.sounds;
 
-import net.ace.whatmeme.WhatMeme;
+import net.ace.WhatMeme;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
