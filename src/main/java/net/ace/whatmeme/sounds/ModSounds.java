@@ -1,11 +1,10 @@
 package net.ace.whatmeme.sounds;
 
-import net.ace.WhatMeme;
+import net.ace.whatmeme.WhatMeme;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-
 
 public class ModSounds {
     public static final Identifier SOUND_ID = Identifier.of(WhatMeme.MOD_ID, "what-sound");
