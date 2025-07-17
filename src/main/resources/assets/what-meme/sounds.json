@@ -1,0 +1,10 @@
+{
+  "what-sound": {
+    "sounds": [
+      {
+        "name": "what-meme:what-sound",
+        "stream": false
+      }
+    ]
+  }
+}
