@@ -5,7 +5,7 @@ import net.ace.whatmeme.sounds.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 public class WhatMeme implements ModInitializer {
-    public static final String MOD_ID = "what-meme";
+    public static final String MOD_ID = "what_meme";
 
     @Override
     public void onInitialize() {

@@ -3,6 +3,10 @@ plugins {
 	id 'maven-publish'
 }
 
+tasks.withType(Copy).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 version = project.mod_version
 group = project.maven_group
 
@@ -35,11 +39,13 @@ dependencies {
 }
 
 processResources {
-	inputs.property "version", project.version
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -57,9 +63,15 @@ java {
 }
 
 jar {
-	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
-	}
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
+
+tasks.named("sourcesJar", Jar).configure {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 // configure the maven publication
@@ -78,4 +90,13 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/resources'
+            exclude '**/icon.png'
+        }
+    }
 }

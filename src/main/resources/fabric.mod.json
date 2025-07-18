@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "what-meme",
+	"id": "what_meme",
 	"version": "${version}",
 	"name": "What meme",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.ace.WhatMemeDataGenerator"
+		],
+		"client": [
+		"net.ace.whatmeme.WhatMemeClient"
 		]
 	},
 	"mixins": [

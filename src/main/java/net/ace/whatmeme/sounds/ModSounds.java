@@ -8,9 +8,14 @@ import net.minecraft.util.Identifier;
 
 public class ModSounds {
     public static final Identifier SOUND_ID = Identifier.of(WhatMeme.MOD_ID, "what-sound");
-    public static final SoundEvent WHAT_SOUND_EVENT = SoundEvent.of(SOUND_ID);
+    public static SoundEvent WHAT_SOUND_EVENT;
 
     public static void registerSounds() {
-        Registry.register(Registries.SOUND_EVENT, SOUND_ID, WHAT_SOUND_EVENT);
+        WHAT_SOUND_EVENT = Registry.register(
+            Registries.SOUND_EVENT,
+            SOUND_ID,
+            SoundEvent.of(SOUND_ID)
+        );
     }
 }
+
